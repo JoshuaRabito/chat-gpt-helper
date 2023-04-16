@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="connect-src 'self' https://api.openai.com/;">
+    <link rel="stylesheet" href="index.css" />
+
+    <title>My ChatGPT Helper</title>
+</head>
+
+<body>
+    <h2>Hello World! Let's call ChatGPT!</h2>
+    <form id="chatForm" action="">
+        <label for="label">Ask your question:</label><br>
+        <input type="text" name="question" id="question" placeholder="type here...">
+        <button id="submit" type="submit">Ask</button>
+    </form>
+
+    <br>
+    <textarea id="response" name="response" placeholder="The response will be printed here.">
+    </textarea>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+    <script src="./chat-gpt-call.js" type="module"></script>
+
+
+</body>
+
+</html>
